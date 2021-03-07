@@ -65,6 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: Text(contact.name.first),
                   subtitle: Text(contact.phone),
                   leading: Image.network(contact.picture.large),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/detail');
+                  },
                 );
               },
             );
