@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:nextflow_flutter_2_contact_app/pages/contact_detail_page.dart';
 import 'package:nextflow_flutter_2_contact_app/user_data.dart';
 
 void main() {
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Nextflow Contact'),
+      routes: {
+        '/': (context) => MyHomePage(title: 'Nextflow Contact'),
+        '/detail': (context) => ContactDetailPage()
+      },
     );
   }
 }
