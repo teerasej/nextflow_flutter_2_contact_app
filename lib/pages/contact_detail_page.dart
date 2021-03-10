@@ -8,7 +8,20 @@ class ContactDetailPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail'),
+        title: Text(contactResult.name.first),
+      ),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 300,
+            child: Center(
+              child: CircleAvatar(
+                radius: 100,
+                backgroundImage: NetworkImage(contactResult.picture.large),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
